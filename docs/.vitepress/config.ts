@@ -47,6 +47,7 @@ const sidebar = {
         { text: '主题', link: '/guide/theming' },
         { text: '状态管理', link: '/guide/state-management' },
         { text: '服务端集成', link: '/guide/server-integration' },
+        { text: '导入与打包', link: '/guide/import-and-bundling' },
         { text: '性能优化', link: '/guide/performance' }
       ]
     }
