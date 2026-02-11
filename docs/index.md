@@ -3,19 +3,19 @@
 layout: home
 
 hero:
-  name: "MyGradio"
+  name: "Egenerui"
   text: "声明式 UI 框架"
   tagline: "用最少代码构建工具界面"
   image:
     src: /logo.svg
-    alt: MyGradio 标识
+    alt: Egenerui 标识
   actions:
     - theme: brand
       text: 开始使用
       link: /guide/installation
     - theme: alt
       text: 访问 GitHub
-      link: https://github.com/yourusername/my-gradio
+      link: https://github.com/GJE1048/egenerui/
 
 features:
   - icon: ⚡
