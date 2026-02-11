@@ -122,6 +122,10 @@ dist
 dist-ssr
 *.local
 
+# Allow docs build output to be committed
+!docs/.vitepress/dist/
+!docs/.vitepress/dist/**
+
 # OS X
 .DS_Store
 
