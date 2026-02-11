@@ -34,6 +34,9 @@ pnpm add my-gradio
 ```typescript
 import gr from 'my-gradio'
 import 'my-gradio/style.css'
+
+// 按需导入（命名导入），仅引入使用到的组件与 API
+import { Button, Textbox } from 'my-gradio'
 ```
 
 ### CommonJS
@@ -41,6 +44,9 @@ import 'my-gradio/style.css'
 ```javascript
 const gr = require('my-gradio')
 require('my-gradio/style.css')
+
+// CommonJS 环境按需导入（需转译支持）
+const { Button, Textbox } = require('my-gradio')
 ```
 
 ### CDN

@@ -12,16 +12,23 @@ import gr from 'my-gradio'
 
 ### 按需引入
 ```typescript
-import { Checkbox } from 'my-gradio/components/Checkbox'
+import { Checkbox } from 'my-gradio'
 ```
 
 ## 使用示例
 
 ### 基础复选框
 ```typescript
+// 方式一：默认对象
 const checkbox = gr.Checkbox({
   label: "我已阅读并同意用户协议",
   value: false
+})
+
+// 方式二：按需导入
+const checkbox2 = Checkbox({
+  label: "订阅新闻邮件",
+  value: true
 })
 ```
 

@@ -2,6 +2,12 @@
 
 MyGradio 内置常见的输入/输出/控制/布局组件，均继承自核心 Component，具备一致的 API。
 
+## 导入方式
+- 全量引入（默认对象）：`import gr from 'my-gradio'`
+- 按需导入（命名导入）：`import { Button, Textbox, Slider } from 'my-gradio'`
+
+按需导入支持 Tree-shaking，打包时仅保留使用到的组件与 API。
+
 ## 分类
 - 输入：Textbox、Slider、Checkbox、Radio、Dropdown、Image、File
 - 输出：Label、Markdown
