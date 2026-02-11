@@ -1,0 +1,135 @@
+
+/**
+ * Custom VitePress Theme Styles
+ */
+
+:root {
+  --vp-c-brand: #3b82f6;
+  --vp-c-brand-light: #60a5fa;
+  --vp-c-brand-lighter: #93c5fd;
+  --vp-c-brand-dark: #2563eb;
+  --vp-c-brand-darker: #1d4ed8;
+  
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  
+  --vp-home-hero-image-background-image: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  --vp-home-hero-image-filter: blur(40px);
+}
+
+.dark {
+  --vp-c-brand: #60a5fa;
+  --vp-c-brand-light: #93c5fd;
+  --vp-c-brand-lighter: #bfdbfe;
+  --vp-c-brand-dark: #3b82f6;
+  --vp-c-brand-darker: #2563eb;
+}
+
+/* Custom code block styles */
+.vp-doc code {
+  font-family: 'Fira Code', 'Menlo', 'Monaco', 'Courier New', monospace;
+}
+
+/* Custom component demo styles */
+.component-demo {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  background: var(--vp-c-bg-alt);
+}
+
+.component-demo-title {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--vp-c-text-1);
+}
+
+/* Custom feature grid */
+.VPFeatures {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.VPFeatures .item {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.VPFeatures .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--vp-c-brand);
+}
+
+/* Custom code preview */
+.code-preview {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.code-preview-tabs {
+  display: flex;
+  background: var(--vp-c-bg-alt);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.code-preview-tab {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--vp-c-text-2);
+  transition: all 0.3s ease;
+}
+
+.code-preview-tab.active {
+  color: var(--vp-c-brand);
+  background: var(--vp-c-bg);
+  border-bottom: 2px solid var(--vp-c-brand);
+}
+
+.code-preview-content {
+  background: var(--vp-c-bg);
+  padding: 1.5rem;
+}
+
+/* Custom badge */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85em;
+  font-weight: 600;
+  line-height: 1;
+  margin-left: 0.5rem;
+}
+
+.badge--new {
+  background: var(--vp-c-brand);
+  color: white;
+}
+
+.badge--beta {
+  background: #f59e0b;
+  color: white;
+}
+
+.badge--deprecated {
+  background: #ef4444;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .VPFeatures .item {
+    padding: 1rem;
+  }
+  
+  .component-demo {
+    padding: 1rem;
+  }
+}
