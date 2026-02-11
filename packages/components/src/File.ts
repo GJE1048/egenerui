@@ -1,4 +1,4 @@
-import { Component, ComponentConfig } from '../core/Component'
+import { Component, ComponentConfig } from '@my-gradio/core'
 
 export interface FileConfig extends ComponentConfig {
   fileTypes?: string[] // ['.pdf', '.docx']

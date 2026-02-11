@@ -1,4 +1,4 @@
-import { Component, ComponentConfig } from '../core/Component'
+import { Component, ComponentConfig } from '@my-gradio/core'
 
 export interface DropdownConfig extends ComponentConfig {
   choices?: (string | { label: string; value: any })[]

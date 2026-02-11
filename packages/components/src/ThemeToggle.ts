@@ -1,5 +1,5 @@
 import { Button, ButtonComponent } from './Button'
-import { getThemeManager } from '../theme/ThemeManager'
+import { getThemeManager } from '@my-gradio/theme'
 
 export class ThemeToggleComponent extends ButtonComponent {
   constructor() {

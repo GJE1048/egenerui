@@ -1,5 +1,5 @@
 
-import { gr } from '../packages'
+import gr from 'my-gradio'
 
 // State Manager
 const stateManager = gr.getStateManager()

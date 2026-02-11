@@ -1,4 +1,4 @@
-import { Component, ComponentConfig } from '../core/Component'
+import { Component, ComponentConfig } from '@my-gradio/core'
 
 // 简单的 Markdown 解析器（实际项目建议使用 marked 或 markdown-it）
 function simpleMarkdownToHTML(markdown: string): string {

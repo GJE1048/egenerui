@@ -1,4 +1,4 @@
-import { Component, ComponentConfig } from '../core/Component'
+import { Component, ComponentConfig } from '@my-gradio/core'
 
 export interface ImageConfig extends ComponentConfig {
   src?: string

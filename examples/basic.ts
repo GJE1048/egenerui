@@ -1,4 +1,4 @@
-import gr from '../packages/index'
+import gr from 'my-gradio'
 
 // --- Greeting App ---
 function greet(name: string): string {

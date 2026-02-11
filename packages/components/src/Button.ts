@@ -1,5 +1,5 @@
-import { Component, ComponentConfig } from '../core/Component'
-import { EventSystem } from '../core/EventSystem'
+import { Component, ComponentConfig } from '@my-gradio/core'
+import { EventSystem } from '@my-gradio/core'
 
 export interface ButtonConfig extends ComponentConfig {
   variant?: 'primary' | 'secondary' | 'stop'

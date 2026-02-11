@@ -17,7 +17,18 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@my-gradio/core": ["packages/core/src/index.ts"],
+      "@my-gradio/components": ["packages/components/src/index.ts"],
+      "@my-gradio/components/*": ["packages/components/src/*.ts"],
+      "@my-gradio/api": ["packages/api/src/index.ts"],
+      "@my-gradio/state": ["packages/state/src/index.ts"],
+      "@my-gradio/theme": ["packages/theme/src/index.ts"],
+      "@my-gradio/layout": ["packages/layout/src/index.ts"],
+      "my-gradio": ["packages/my-gradio/src/index.ts"]
+    }
   },
   "include": ["packages/**/*.ts", "examples/**/*.ts"]
 }
