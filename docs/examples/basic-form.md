@@ -1,121 +1,118 @@
 
-# Basic Form Example
+# 基础表单示例
 
-A simple form with text inputs and validation.
+一个包含文本输入与校验的简单注册表单。
 
-## Full Code
+## 完整示例
 
 ```typescript
 import gr from 'my-gradio'
 
-// Handler function
 function processForm(name: string, email: string, age: number): string {
-  return `Name: ${name}\nEmail: ${email}\nAge: ${age}`
+  return `姓名：${name}\n邮箱：${email}\n年龄：${age}`
 }
 
-// Create components
+// 组件
 const name = gr.Textbox({
-  label: "Name",
-  placeholder: "Enter your name",
-  value: "John Doe"
+  label: "姓名",
+  placeholder: "请输入你的姓名",
+  value: "张三"
 })
 
 const email = gr.Textbox({
-  label: "Email",
+  label: "邮箱",
   type: "email",
   placeholder: "your.email@example.com"
 })
 
 const age = gr.Slider({
-  label: "Age",
+  label: "年龄",
   minimum: 0,
   maximum: 100,
   value: 25
 })
 
-const submit = gr.Button("Submit").primary()
-const clear = gr.ClearButton([name, email, age], { label: "Clear" })
+const submit = gr.Button("提交").primary()
+const reset = gr.Button("重置")
 const result = gr.Textbox({
-  label: "Result",
+  label: "结果",
   lines: 5,
   interactive: false
 })
 
-// Bind event
+// 事件绑定
 submit.click(processForm, {
   inputs: [name, email, age],
   outputs: result,
   apiName: "process_form"
 })
 
-// Layout
+reset.click(() => {
+  name.setValue('')
+  email.setValue('')
+  age.setValue(25)
+  return '已重置'
+}, { outputs: result })
+
+// 布局
 const ui = gr.Column([
-  gr.Markdown("# 📝 Registration Form"),
+  gr.Markdown("# 📝 注册表单"),
   gr.Row([name]),
   gr.Row([email]),
   gr.Row([age]),
-  gr.Row([submit, clear]),
+  gr.Row([submit, reset]),
   gr.Row([result])
 ])
 
-// Launch
+// 启动
 gr.launch(ui, {
-  title: "Registration Form",
+  title: "注册表单",
   theme: "light"
 })
 ```
 
-## Features
+## 特性
 
-- ✅ Text input with placeholder
-- ✅ Email validation
-- ✅ Age slider (0-100)
-- ✅ Submit button
-- ✅ Clear button to reset form
-- ✅ Result display
+- 文本输入与占位符
+- 邮箱格式输入
+- 年龄滑块（0-100）
+- 提交与重置按钮
+- 结果展示
 
-## Try It
+## 个性化
 
-1. Clone the repository
-2. Navigate to `examples/basic-form`
-3. Run `npm install`
-4. Run `npm run dev`
-5. Open browser to `http://localhost:3000`
-
-## Customization
-
-### Add More Fields
+### 增加更多字段
 
 ```typescript
 const phone = gr.Textbox({
-  label: "Phone",
-  placeholder: "Enter your phone number"
+  label: "电话",
+  placeholder: "请输入手机号"
 })
 
 const address = gr.Textbox({
-  label: "Address",
+  label: "地址",
   lines: 3,
-  placeholder: "Enter your address"
+  placeholder: "请输入联系地址"
 })
 ```
 
-### Add Validation
+### 简单校验
 
 ```typescript
 submit.click(() => {
-  if (!name.value.trim()) {
-    alert('Name is required')
+  if (!name.value?.trim()) {
+    alert('姓名为必填项')
     return
   }
-  if (!email.value.includes('@')) {
-    alert('Invalid email')
+  if (!email.value?.includes('@')) {
+    alert('邮箱格式不正确')
     return
   }
-  // Process form...
-})
+  return processForm(name.getValue(), email.getValue(), age.getValue())
+}, { outputs: result })
 ```
 
-## Next Steps
+## 下一步
 
-- [Calculator](/examples/calculator) - Learn about numeric inputs
-- [Image Generator](/examples/image-generator) - Learn about file uploads
+- [计算器](/examples/calculator) - 数值输入与运算
+- [图像生成器](/examples/image-generator) - 文件上传与图片预览
