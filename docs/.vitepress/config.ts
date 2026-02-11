@@ -10,9 +10,9 @@ const nav = [
   {
     text: '资源',
     items: [
-      { text: 'GitHub', link: 'https://github.com/yourusername/my-gradio' },
-      { text: 'npm', link: 'https://www.npmjs.com/package/my-gradio' },
-      { text: '讨论', link: 'https://github.com/yourusername/my-gradio/discussions' }
+      { text: 'GitHub', link: 'https://github.com/GJE1048/egenerui' },
+      { text: 'npm', link: 'https://www.npmjs.com/package/egenerui' },
+      { text: '讨论', link: 'https://github.com/GJE1048/egenerui/discussions' }
     ]
   }
 ]
@@ -128,7 +128,7 @@ export default defineConfig({
   // 站点配置
   title: 'MyGradio',
   description: '用于构建工具界面的声明式 UI 框架',
-  base: '/my-gradio/',
+  base: '/egenerui/',
   locales: {
     root: {
       label: '简体中文',
@@ -156,7 +156,7 @@ export default defineConfig({
     
     // 社交链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/yourusername/my-gradio' },
+      { icon: 'github', link: 'https://github.com/GJE1048/egenerui' },
       { icon: 'twitter', link: 'https://twitter.com/yourusername' }
     ],
     
@@ -202,7 +202,7 @@ export default defineConfig({
     
     // 编辑链接
     editLink: {
-      pattern: 'https://github.com/yourusername/my-gradio/edit/main/docs/:path',
+      pattern: 'https://github.com/GJE1048/egenerui/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页'
     }
   },
