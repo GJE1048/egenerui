@@ -1,34 +1,33 @@
+# 安装
 
-# Installation
+本文将帮助你在项目中安装并使用 MyGradio。
 
-This guide will help you install MyGradio in your project.
-
-## Prerequisites
+## 环境要求
 
 - Node.js >= 18.0.0
-- npm >= 9.0.0 or pnpm >= 8.0.0
+- 包管理器：npm >= 9.0.0 或 pnpm >= 8.0.0（推荐）
 
-## Installation Methods
+## 安装方式
 
-### Using npm
+### 使用 npm
 
 ```bash
 npm install my-gradio
 ```
 
-### Using yarn
+### 使用 yarn
 
 ```bash
 yarn add my-gradio
 ```
 
-### Using pnpm
+### 使用 pnpm
 
 ```bash
 pnpm add my-gradio
 ```
 
-## Importing MyGradio
+## 引入 MyGradio
 
 ### ES Modules
 
@@ -56,14 +55,13 @@ require('my-gradio/style.css')
   <div id="app"></div>
   <script type="module">
     import gr from 'https://cdn.jsdelivr.net/npm/my-gradio@latest/+esm'
-    
-    // Your code here
+    // 在此编写代码
   </script>
 </body>
 </html>
 ```
 
-## Next Steps
+## 下一步
 
-- [Quick Start](/guide/quick-start) - Build your first app
-- [Project Structure](/guide/project-structure) - Understand the project layout
+- [快速上手](/guide/quick-start) - 构建你的第一个应用
+- [项目结构](/guide/project-structure) - 了解项目组织与约定

@@ -1,11 +1,11 @@
 
-# Quick Start
+# 快速上手
 
-Build your first MyGradio app in 5 minutes.
+用 5 分钟构建你的第一个 MyGradio 应用。
 
-## Step 1: Create HTML File
+## 步骤一：创建 HTML 文件
 
-Create `index.html`:
+创建 `index.html`：
 
 ```html
 <!DOCTYPE html>
@@ -23,67 +23,67 @@ Create `index.html`:
 </html>
 ```
 
-## Step 2: Create TypeScript File
+## 步骤二：创建 TypeScript 文件
 
-Create `main.ts`:
+创建 `main.ts`：
 
 ```typescript
 import gr from 'my-gradio'
 
-// Define handler function
+// 处理函数
 function greet(name: string): string {
   if (!name.trim()) {
-    return "Please enter your name"
+    return "请输入你的名字"
   }
-  return `Hello, ${name}! 👋 Welcome to MyGradio!`
+  return `你好，${name}！👋 欢迎使用 MyGradio！`
 }
 
-// Create components
+// 组件
 const nameInput = gr.Textbox({
-  label: "What's your name?",
-  placeholder: "Enter your name here...",
-  value: "World"
+  label: "你的名字？",
+  placeholder: "在此输入...",
+  value: "世界"
 })
 
 const greetingOutput = gr.Textbox({
-  label: "Greeting",
+  label: "问候语",
   interactive: false
 })
 
-const greetButton = gr.Button("Say Hello").primary()
+const greetButton = gr.Button("打个招呼").primary()
 
-// Bind event
+// 事件绑定
 greetButton.click(greet, {
   inputs: nameInput,
   outputs: greetingOutput,
   apiName: "greet"
 })
 
-// Layout
+// 布局
 const interface = gr.Column([
-  gr.Markdown("# 🎉 Welcome to MyGradio!"),
+  gr.Markdown("# 🎉 欢迎使用 MyGradio！"),
   gr.Row([nameInput]),
   gr.Row([greetButton]),
   gr.Row([greetingOutput])
 ])
 
-// Launch app
+// 启动应用
 gr.launch(interface, {
   target: "#app",
-  title: "My First App",
+  title: "我的第一个应用",
   theme: "light"
 })
 ```
 
-## Step 3: Setup Vite
+## 步骤三：配置 Vite
 
-Install Vite:
+安装 Vite：
 
 ```bash
 npm install -D vite
 ```
 
-Create `vite.config.ts`:
+创建 `vite.config.ts`：
 
 ```typescript
 import { defineConfig } from 'vite'
@@ -106,24 +106,24 @@ Add scripts to `package.json`:
 }
 ```
 
-## Step 4: Run Development Server
+## 步骤四：运行开发服务器
 
 ```bash
 npm run dev
 ```
 
-Open browser and visit `http://localhost:3000`. You should see:
+打开浏览器访问 `http://localhost:3000`，你将看到：
 
-1. A title "Welcome to MyGradio!"
-2. A text input box
-3. A "Say Hello" button
-4. An output box
+1. 标题 “欢迎使用 MyGradio！”
+2. 一个文本输入框
+3. 一个“打个招呼”按钮
+4. 一个输出框
 
-Type your name and click the button. The output box will display a greeting!
+输入你的名字并点击按钮，输出框将显示问候语！
 
-## Project Structure
+## 项目结构
 
-A typical MyGradio project structure:
+一个典型的 MyGradio 项目结构：
 
 ```
 my-app/
@@ -135,8 +135,8 @@ my-app/
 └── public/                 # Static assets
 ```
 
-## Next Steps
+## 下一步
 
-- [Components](/components/input/textbox) - Explore all available components
-- [Theming](/guide/theming) - Customize the appearance
-- [State Management](/guide/state-management) - Persist user data
+- [组件](/components/input/textbox) - 浏览所有可用组件
+- [主题](/guide/theming) - 自定义外观
+- [状态管理](/guide/state-management) - 持久化用户数据
