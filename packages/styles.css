@@ -1,0 +1,290 @@
+/* Gradio 风格样式 */
+.gradio-app {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.gradio-title {
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 30px;
+}
+
+/* 容器 */
+.gradio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 组件通用样式 */
+.gr-component {
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.gr-component:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 文本框 */
+.gr-textbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gr-textbox-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+.gr-textbox-input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.gr-textbox-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.gr-textbox-input:disabled {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+}
+
+/* 按钮 */
+.gr-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.gr-button-secondary {
+  background: white;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.gr-button-secondary:hover:not(:disabled) {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.gr-button-primary {
+  background: #3b82f6;
+  color: white;
+  border: 1px solid #3b82f6;
+}
+
+.gr-button-primary:hover:not(:disabled) {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.gr-button-stop {
+  background: #ef4444;
+  color: white;
+  border: 1px solid #ef4444;
+}
+
+.gr-button-stop:hover:not(:disabled) {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+.gr-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.gr-button-sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.gr-button-lg {
+  padding: 14px 28px;
+  font-size: 16px;
+}
+
+/* 滑块 */
+.gr-slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gr-slider-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+.gr-slider-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gr-slider-value {
+  min-width: 50px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.gr-slider-input {
+  flex: 1;
+  height: 24px;
+  -webkit-appearance: none;
+  background: #e5e7eb;
+  border-radius: 4px;
+}
+
+.gr-slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gr-slider-input::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* 复选框 */
+.gr-checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.gr-checkbox-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.gr-checkbox-input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.gr-checkbox-label {
+  font-size: 14px;
+  color: #374151;
+}
+
+/* Image */
+.gr-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gr-image-label {
+  font-weight: 600;
+  color: #374151;
+  font-size: 14px;
+}
+
+.gr-image {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* 布局 */
+.gr-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gr-row-panel {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.gr-row-item {
+  min-width: 0;
+}
+
+.gr-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gr-column-panel {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.gr-column-item {
+  width: 100%;
+}
+
+/* 暗色主题 */
+.gradio-app[data-theme="dark"] {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.gradio-app[data-theme="dark"] .gr-component {
+  background: #1f2937;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.gradio-app[data-theme="dark"] .gr-textbox-input {
+  background: #374151;
+  border-color: #4b5563;
+  color: #f9fafb;
+}
+
+.gradio-app[data-theme="dark"] .gr-textbox-input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+}
+
+.gradio-app[data-theme="dark"] .gr-button-secondary {
+  background: #374151;
+  color: #f9fafb;
+  border-color: #4b5563;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .gr-row {
+    flex-direction: column;
+  }
+  
+  .gradio-app {
+    padding: 10px;
+  }
+}
