@@ -1,20 +1,19 @@
 
-# Quick Start
+# 快速上手
 
-Build your first MyGradio app in 5 minutes.
+在 5 分钟内构建你的第一个 MyGradio 应用。
 
-## Step 1: Create HTML File
+## 第一步：创建 HTML 文件
 
-Create `index.html`:
+创建 `index.html`：
 
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First MyGradio App</title>
-  <link rel="stylesheet" href="/style.css">
+  <title>我的第一个 MyGradio 应用</title>
 </head>
 <body>
   <div id="app"></div>
@@ -23,120 +22,74 @@ Create `index.html`:
 </html>
 ```
 
-## Step 2: Create TypeScript File
+## 第二步：创建 TypeScript 文件
 
-Create `main.ts`:
+创建 `main.ts`：
 
 ```typescript
 import gr from 'my-gradio'
+import 'my-gradio/style.css'
 
-// Define handler function
+// 定义处理函数
 function greet(name: string): string {
   if (!name.trim()) {
-    return "Please enter your name"
+    return "请输入你的名字"
   }
-  return `Hello, ${name}! 👋 Welcome to MyGradio!`
+  return `你好, ${name}! 👋 欢迎使用 MyGradio!`
 }
 
-// Create components
+// 创建组件
 const nameInput = gr.Textbox({
-  label: "What's your name?",
-  placeholder: "Enter your name here...",
-  value: "World"
+  label: "你叫什么名字？",
+  placeholder: "在此输入名称...",
+  value: "世界"
 })
 
 const greetingOutput = gr.Textbox({
-  label: "Greeting",
+  label: "问候语",
   interactive: false
 })
 
-const greetButton = gr.Button("Say Hello").primary()
+const greetButton = gr.Button("打个招呼").primary()
 
-// Bind event
+// 绑定事件
 greetButton.click(greet, {
   inputs: nameInput,
-  outputs: greetingOutput,
-  apiName: "greet"
+  outputs: greetingOutput
 })
 
-// Layout
-const interface = gr.Column([
-  gr.Markdown("# 🎉 Welcome to MyGradio!"),
+// 布局
+const app = gr.Column([
+  gr.Markdown("# 🎉 欢迎使用 MyGradio!"),
   gr.Row([nameInput]),
   gr.Row([greetButton]),
   gr.Row([greetingOutput])
 ])
 
-// Launch app
-gr.launch(interface, {
+// 启动应用
+gr.Renderer.getInstance().launch(app, {
   target: "#app",
-  title: "My First App",
-  theme: "light"
+  title: "我的第一个应用"
 })
 ```
 
-## Step 3: Setup Vite
+## 第三步：运行开发服务器
 
-Install Vite:
+安装 Vite：
 
 ```bash
 npm install -D vite
 ```
 
-Create `vite.config.ts`:
-
-```typescript
-import { defineConfig } from 'vite'
-
-export default defineConfig({
-  server: {
-    port: 3000
-  }
-})
-```
-
-Add scripts to `package.json`:
-
-```json
-{
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build"
-  }
-}
-```
-
-## Step 4: Run Development Server
+运行项目：
 
 ```bash
-npm run dev
+npx vite
 ```
 
-Open browser and visit `http://localhost:3000`. You should see:
+现在访问 `http://localhost:5173`，你就能看到你的第一个 MyGradio 应用在运行了！
 
-1. A title "Welcome to MyGradio!"
-2. A text input box
-3. A "Say Hello" button
-4. An output box
+## 接下来
 
-Type your name and click the button. The output box will display a greeting!
-
-## Project Structure
-
-A typical MyGradio project structure:
-
-```
-my-app/
-├── index.html              # HTML entry file
-├── main.ts                 # App entry
-├── package.json            # Project config
-├── vite.config.ts          # Vite config
-├── tsconfig.json           # TypeScript config
-└── public/                 # Static assets
-```
-
-## Next Steps
-
-- [Components](/components/input/textbox) - Explore all available components
-- [Theming](/guide/theming) - Customize the appearance
-- [State Management](/guide/state-management) - Persist user data
+- [按需引入](/guide/installation#_2-按需引入-推荐用于生产环境) - 了解如何优化项目体积
+- [组件文档](/components/input/textbox) - 查看所有可用组件
