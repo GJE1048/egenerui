@@ -3,8 +3,8 @@
 MyGradio 内置常见的输入/输出/控制/布局组件，均继承自核心 Component，具备一致的 API。
 
 ## 导入方式
-- 全量引入（默认对象）：`import gr from 'my-gradio'`
-- 按需导入（命名导入）：`import { Button, Textbox, Slider } from 'my-gradio'`
+- 全量引入（默认对象）：`import gr from 'egenerui'`
+- 按需导入（命名导入）：`import { Button, Textbox, Slider } from 'egenerui'`
 
 按需导入支持 Tree-shaking，打包时仅保留使用到的组件与 API。
 
@@ -17,7 +17,7 @@ MyGradio 内置常见的输入/输出/控制/布局组件，均继承自核心 C
 ## 使用示例
 
 ```ts
-import gr from 'my-gradio'
+import gr from 'egenerui'
 
 const name = gr.Textbox({ label: '姓名' })
 const ok = gr.Button('提交').primary()

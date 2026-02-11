@@ -1,0 +1,39 @@
+{
+  "name": "egenerui",
+  "version": "0.1.0",
+  "description": "声明式 UI 框架：用最少代码构建工具界面",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./style.css"
+  },
+  "files": [
+    "dist",
+    "style.css"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ui",
+    "gradio",
+    "typescript",
+    "components",
+    "framework"
+  ],
+  "author": "",
+  "license": "MIT"
+}

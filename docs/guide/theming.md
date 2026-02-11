@@ -5,7 +5,7 @@ MyGradio 的主题由 ThemeManager 统一管理，支持内置与自定义主题
 ## 切换主题
 
 ```ts
-import { ThemeToggle } from 'my-gradio'
+import { ThemeToggle } from 'egenerui'
 
 const toggle = ThemeToggle()
 ```
@@ -15,7 +15,7 @@ const toggle = ThemeToggle()
 ## 程序化加载主题
 
 ```ts
-import { getThemeManager, builtinThemes } from 'my-gradio'
+import { getThemeManager, builtinThemes } from 'egenerui'
 
 const tm = getThemeManager()
 tm.loadTheme('dark')           // 使用内置深色主题
@@ -26,7 +26,7 @@ tm.toggleTheme()               // 在浅/深色之间切换
 ## 自定义主题
 
 ```ts
-import { getThemeManager } from 'my-gradio'
+import { getThemeManager } from 'egenerui'
 
 const tm = getThemeManager()
 tm.registerTheme('brand', {

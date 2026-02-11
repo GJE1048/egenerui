@@ -16,7 +16,7 @@ MyGradio 的核心由 Component、Renderer、EventSystem、DataBinding 构成，
 示例：
 
 ```ts
-import { Textbox, Button } from 'my-gradio'
+import { Textbox, Button } from 'egenerui'
 
 const name = Textbox({ label: '姓名', placeholder: '输入你的名字' })
 const greet = Button('问候', { variant: 'primary' })
@@ -39,7 +39,7 @@ greet.click(() => {
 示例：
 
 ```ts
-import { Renderer, Textbox, Button, Row } from 'my-gradio'
+import { Renderer, Textbox, Button, Row } from 'egenerui'
 
 const ui = Row([
   Textbox({ label: '城市' }),
@@ -83,7 +83,7 @@ binding 结构：
 示例：
 
 ```ts
-import { Slider, Textbox, DataBinding } from 'my-gradio'
+import { Slider, Textbox, DataBinding } from 'egenerui'
 
 const s = Slider({ minimum: 0, maximum: 100, value: 50 })
 const t = Textbox({ label: '百分比' })

@@ -22,7 +22,7 @@ type StateOptions = {
 示例：
 
 ```ts
-import { getStateManager } from 'my-gradio'
+import { getStateManager } from 'egenerui'
 const state = getStateManager()
 
 state.set('theme', 'dark', { persist: true, storage: 'local' })

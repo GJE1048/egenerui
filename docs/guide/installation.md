@@ -12,19 +12,19 @@
 ### 使用 npm
 
 ```bash
-npm install my-gradio
+npm install egenerui
 ```
 
 ### 使用 yarn
 
 ```bash
-yarn add my-gradio
+yarn add egenerui
 ```
 
 ### 使用 pnpm
 
 ```bash
-pnpm add my-gradio
+pnpm add egenerui
 ```
 
 ## 引入 MyGradio
@@ -32,21 +32,21 @@ pnpm add my-gradio
 ### ES Modules
 
 ```typescript
-import gr from 'my-gradio'
-import 'my-gradio/style.css'
+import gr from 'egenerui'
+import 'egenerui/style.css'
 
 // 按需导入（命名导入），仅引入使用到的组件与 API
-import { Button, Textbox } from 'my-gradio'
+import { Button, Textbox } from 'egenerui'
 ```
 
 ### CommonJS
 
 ```javascript
-const gr = require('my-gradio')
-require('my-gradio/style.css')
+const gr = require('egenerui')
+require('egenerui/style.css')
 
 // CommonJS 环境按需导入（需转译支持）
-const { Button, Textbox } = require('my-gradio')
+const { Button, Textbox } = require('egenerui')
 ```
 
 ### CDN
@@ -55,12 +55,12 @@ const { Button, Textbox } = require('my-gradio')
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/my-gradio@latest/dist/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/egenerui@latest/dist/style.css">
 </head>
 <body>
   <div id="app"></div>
   <script type="module">
-    import gr from 'https://cdn.jsdelivr.net/npm/my-gradio@latest/+esm'
+    import gr from 'https://cdn.jsdelivr.net/npm/egenerui@latest/+esm'
     // 在此编写代码
   </script>
 </body>

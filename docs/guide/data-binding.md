@@ -5,7 +5,7 @@ DataBinding 提供简化的组件间数据联动能力，包括单向、双向�
 ## 单向绑定
 
 ```ts
-import { Slider, Textbox, DataBinding } from 'my-gradio'
+import { Slider, Textbox, DataBinding } from 'egenerui'
 
 const s = Slider({ label: '百分比', minimum: 0, maximum: 100, value: 50 })
 const t = Textbox({ label: '显示值' })
@@ -16,7 +16,7 @@ DataBinding.bind(s, t, v => `${v}%`)
 ## 双向绑定
 
 ```ts
-import { Textbox, DataBinding } from 'my-gradio'
+import { Textbox, DataBinding } from 'egenerui'
 
 const a = Textbox({ label: 'A' })
 const b = Textbox({ label: 'B' })
@@ -27,7 +27,7 @@ DataBinding.twoWay(a, b)
 ## 计算属性
 
 ```ts
-import { Textbox, DataBinding } from 'my-gradio'
+import { Textbox, DataBinding } from 'egenerui'
 
 const a = Textbox({ label: 'A' })
 const b = Textbox({ label: 'B' })

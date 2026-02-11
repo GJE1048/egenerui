@@ -7,12 +7,12 @@
 
 ### 全量引入
 ```typescript
-import gr from 'my-gradio'
+import gr from 'egenerui'
 ```
 
 ### 按需引入
 ```typescript
-import { Checkbox } from 'my-gradio'
+import { Checkbox } from 'egenerui'
 ```
 
 ## 使用示例

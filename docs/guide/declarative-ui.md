@@ -10,7 +10,7 @@ MyGradio 以声明式的方式构建界面：通过组合组件与定义事件�
 ## 示例
 
 ```ts
-import gr from 'my-gradio'
+import gr from 'egenerui'
 
 const name = gr.Textbox({ label: '姓名', placeholder: '输入你的名字' })
 const greet = gr.Button('问候').primary()

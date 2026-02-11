@@ -15,7 +15,7 @@ MyGradio 提供常用输入/输出/控制/布局组件，均继承自核心 Comp
 示例：
 
 ```ts
-import { Textbox, Slider, Checkbox } from 'my-gradio'
+import { Textbox, Slider, Checkbox } from 'egenerui'
 
 const name = Textbox({ label: '姓名' })
 const volume = Slider({ label: '音量', minimum: 0, maximum: 100, value: 30 })
@@ -28,7 +28,7 @@ const agree = Checkbox({ label: '我已阅读协议' })
 - Markdown 用于渲染 Markdown 内容
 
 ```ts
-import { Markdown } from 'my-gradio'
+import { Markdown } from 'egenerui'
 const md = Markdown({ value: '# 标题\n\n这是说明文本' })
 ```
 
@@ -38,7 +38,7 @@ const md = Markdown({ value: '# 标题\n\n这是说明文本' })
 - ThemeToggle() 切换浅/深色主题
 
 ```ts
-import { Button } from 'my-gradio'
+import { Button } from 'egenerui'
 const submit = Button('提交', { variant: 'primary' })
 submit.click(() => console.log('提交中...'))
 ```
@@ -49,7 +49,7 @@ submit.click(() => console.log('提交中...'))
 - Column(components[], { variant?: 'default' | 'panel' })
 
 ```ts
-import { Row, Column, Textbox, Button } from 'my-gradio'
+import { Row, Column, Textbox, Button } from 'egenerui'
 
 const form = Column([
   Textbox({ label: '邮箱' }),

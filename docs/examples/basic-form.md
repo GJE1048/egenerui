@@ -6,7 +6,7 @@
 ## 完整示例
 
 ```typescript
-import gr from 'my-gradio'
+import gr from 'egenerui'
 
 function processForm(name: string, email: string, age: number): string {
   return `姓名：${name}\n邮箱：${email}\n年龄：${age}`

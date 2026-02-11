@@ -28,7 +28,7 @@
 创建 `main.ts`：
 
 ```typescript
-import gr from 'my-gradio'
+import gr from 'egenerui'
 
 // 处理函数
 function greet(name: string): string {

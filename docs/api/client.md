@@ -12,7 +12,7 @@ Client 提供与后端交互的能力，包括预测与文件上传；同时 Rou
 示例：
 
 ```ts
-import { connect } from 'my-gradio'
+import { connect } from 'egenerui'
 
 const api = connect('http://localhost:7860')
 
@@ -27,7 +27,7 @@ console.log(res.data)
 - getRouter() 获取全局 Router
 
 ```ts
-import { getRouter } from 'my-gradio'
+import { getRouter } from 'egenerui'
 
 const router = getRouter()
 router.add('/detail/:id', ({ id }) => {

@@ -6,7 +6,7 @@ Single or multi-line text input component.
 ## Import
 
 ```typescript
-import gr from 'my-gradio'
+import gr from 'egenerui'
 ```
 
 ## Usage

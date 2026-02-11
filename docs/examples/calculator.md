@@ -5,7 +5,7 @@
 ## 完整示例
 
 ```typescript
-import gr from 'my-gradio'
+import gr from 'egenerui'
 
 function calc(aStr: string, bStr: string, op: string): string {
   const a = parseFloat(aStr || '0')

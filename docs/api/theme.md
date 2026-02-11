@@ -19,7 +19,7 @@ ThemeManager 负责主题的注册、加载与切换，并通过 CSS 变量驱�
 配置结构示例：
 
 ```ts
-import { getThemeManager, builtinThemes } from 'my-gradio'
+import { getThemeManager, builtinThemes } from 'egenerui'
 
 const tm = getThemeManager()
 

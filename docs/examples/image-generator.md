@@ -5,7 +5,7 @@
 ## 完整示例
 
 ```typescript
-import gr from 'my-gradio'
+import gr from 'egenerui'
 
 function generateImage(file: any, style: string): string {
   const data = Array.isArray(file) ? file[0]?.data : file?.data

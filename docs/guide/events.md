@@ -7,7 +7,7 @@
 绑定示例：
 
 ```ts
-import gr from 'my-gradio'
+import gr from 'egenerui'
 
 const a = gr.Textbox({ label: 'A' })
 const b = gr.Textbox({ label: 'B' })

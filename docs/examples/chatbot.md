@@ -5,7 +5,7 @@
 ## 完整示例
 
 ```typescript
-import gr from 'my-gradio'
+import gr from 'egenerui'
 
 const chat = gr.Markdown({ value: '### 会话\n\n' })
 const input = gr.Textbox({ label: '消息', placeholder: '请输入...' })

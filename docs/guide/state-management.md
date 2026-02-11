@@ -5,7 +5,7 @@ StateManager 提供全局键值存储、订阅与持久化，适合跨组件共�
 ## 基本用法
 
 ```ts
-import { getStateManager } from 'my-gradio'
+import { getStateManager } from 'egenerui'
 const state = getStateManager()
 
 state.set('theme', 'dark')          // 设置状态

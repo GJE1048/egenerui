@@ -5,7 +5,7 @@
 ## 预测接口
 
 ```ts
-import { connect } from 'my-gradio'
+import { connect } from 'egenerui'
 
 const api = connect('http://localhost:7860')
 
@@ -18,7 +18,7 @@ async function greet(name: string) {
 在按钮事件中使用：
 
 ```ts
-import gr from 'my-gradio'
+import gr from 'egenerui'
 
 const name = gr.Textbox({ label: '姓名' })
 const run = gr.Button('服务端问候').primary()
@@ -42,7 +42,7 @@ async function uploadFiles(f: any): Promise<string> {
 ## 路由
 
 ```ts
-import { getRouter } from 'my-gradio'
+import { getRouter } from 'egenerui'
 
 const router = getRouter()
 router.add('/detail/:id', ({ id }) => {
