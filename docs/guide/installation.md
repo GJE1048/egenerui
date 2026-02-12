@@ -1,6 +1,6 @@
 # 安装
 
-本文将帮助你在项目中安装并使用 MyGradio。
+本文将帮助你在项目中安装并使用 Egenerui。
 
 ## 环境要求
 
@@ -27,7 +27,7 @@ yarn add egenerui
 pnpm add egenerui
 ```
 
-## 引入 MyGradio
+## 引入 Egenerui
 
 ### ES Modules
 

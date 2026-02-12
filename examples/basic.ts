@@ -54,6 +54,6 @@ const ui = gr.Column([
 ])
 
 gr.launch(ui, { 
-  title: "MyGradio Demo",
+  title: "Egenerui Demo",
   target: '#app'
 })

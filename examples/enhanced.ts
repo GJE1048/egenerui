@@ -84,4 +84,4 @@ const layout = gr.Column([
   ])
 ])
 
-gr.launch(layout, { title: 'MyGradio Enhanced Example' })
+gr.launch(layout, { title: 'Egenerui Enhanced Example' })

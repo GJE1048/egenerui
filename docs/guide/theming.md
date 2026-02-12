@@ -1,6 +1,6 @@
 # 主题
 
-MyGradio 的主题由 ThemeManager 统一管理，支持内置与自定义主题，并通过 CSS 变量驱动样式。
+Egenerui 的主题由 ThemeManager 统一管理，支持内置与自定义主题，并通过 CSS 变量驱动样式。
 
 ## 切换主题
 

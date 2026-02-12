@@ -1,6 +1,6 @@
 # 核心 API
 
-MyGradio 的核心由 Component、Renderer、EventSystem、DataBinding 构成，它们提供了声明式 UI 的基础能力。
+Egenerui 的核心由 Component、Renderer、EventSystem、DataBinding 构成，它们提供了声明式 UI 的基础能力。
 
 ## Component
 

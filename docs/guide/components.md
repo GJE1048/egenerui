@@ -1,6 +1,6 @@
 # 组件
 
-MyGradio 内置常见的输入/输出/控制/布局组件，均继承自核心 Component，具备一致的 API。
+Egenerui 内置常见的输入/输出/控制/布局组件，均继承自核心 Component，具备一致的 API。
 
 ## 导入方式
 - 全量引入（默认对象）：`import gr from 'egenerui'`

@@ -1,7 +1,7 @@
 
 # 快速上手
 
-用 5 分钟构建你的第一个 MyGradio 应用。
+用 5 分钟构建你的第一个 Egenerui 应用。 
 
 ## 步骤一：创建 HTML 文件
 
@@ -13,7 +13,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First MyGradio App</title>
+  <title>My First Egenerui App</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -35,7 +35,7 @@ function greet(name: string): string {
   if (!name.trim()) {
     return "请输入你的名字"
   }
-  return `你好，${name}！👋 欢迎使用 MyGradio！`
+  return `你好，${name}！👋 欢迎使用 Egenerui！`
 }
 
 // 组件
@@ -61,7 +61,7 @@ greetButton.click(greet, {
 
 // 布局
 const interface = gr.Column([
-  gr.Markdown("# 🎉 欢迎使用 MyGradio！"),
+  gr.Markdown("# 🎉 欢迎使用 Egenerui！"),
   gr.Row([nameInput]),
   gr.Row([greetButton]),
   gr.Row([greetingOutput])
@@ -114,7 +114,7 @@ npm run dev
 
 打开浏览器访问 `http://localhost:3000`，你将看到：
 
-1. 标题 “欢迎使用 MyGradio！”
+1. 标题 “欢迎使用 Egenerui！”
 2. 一个文本输入框
 3. 一个“打个招呼”按钮
 4. 一个输出框
@@ -123,7 +123,7 @@ npm run dev
 
 ## 项目结构
 
-一个典型的 MyGradio 项目结构：
+一个典型的 Egenerui 项目结构：
 
 ```
 my-app/
