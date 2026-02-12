@@ -126,7 +126,7 @@ const sidebar = {
 
 export default defineConfig({
   // 站点配置
-  title: 'MyGradio',
+  title: 'Egenerui',
   description: '用于构建工具界面的声明式 UI 框架',
   base: '/egenerui/',
   locales: {
@@ -143,7 +143,7 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
     ['meta', { name: 'theme-color', content: '#3b82f6' }],
-    ['meta', { name: 'author', content: 'MyGradio 团队' }],
+    ['meta', { name: 'author', content: 'Egenerui 团队' }],
     ['meta', { name: 'keywords', content: 'UI, 框架, gradio, 声明式, TypeScript' }]
   ],
   
@@ -163,7 +163,7 @@ export default defineConfig({
     // 页脚
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: '版权所有 © 2024 MyGradio 团队'
+      copyright: '版权所有 © 2026 Egenerui 团队'
     },
     
     // 搜索
